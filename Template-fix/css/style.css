@@ -166,9 +166,13 @@ h2 {
 }
 
 .tm-content-box {
-    max-width: 310px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    max-width: 100%; /* Adjusted to fit the parent container */
+    margin-bottom: 1px; /* Adjusted margin as needed */
+    padding-bottom: 10%; /* Adjusted padding as needed */
+    margin-bottom: 10px; /* Duplicate margin-bottom removed */
+    display: flex; /* Added flex display */
+    flex-direction: column; /* Added column flex direction */
+    align-items: left; /* left align items */
 }
 
 h3 {
@@ -213,12 +217,16 @@ a:focus {
 	position: center;
 }
 
+.button-wrapper {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 .tm-btn-options {
     color: white;
     background-color: #8f8d8d;
     border: none;
     border-radius: 5px;
-    display: inline-block;
     padding: 10px 20px;
 }
 .btn-options:hover {
@@ -259,6 +267,10 @@ a:focus {
 .btn-confirm-no {
     background-color: #cccccc;
     color: white;
+}
+
+.tm-mb-45 {
+    margin-bottom: 45px
 }
 
 .tm-margin-b-15 {
@@ -377,7 +389,7 @@ p {
 }
 
 .tm-footer-content-box-title {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .tm-img-post {
@@ -483,7 +495,7 @@ p {
 		margin-right: 0;
 	}
 	.navbar-toggler:focus { outline: none; }
-	.tm-content-box { margin-bottom: 50px; }
+	.tm-content-box { margin-bottom: 10px; }
 	
 	.tm-2-col-left {
 		padding-right: 0;
@@ -570,7 +582,7 @@ p {
     }
 
     .tm-content-box {
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 
     .tm-margin-t-mid {
@@ -578,7 +590,7 @@ p {
     }
 
     .tm-footer-content-box {
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 
     #google-map {
