@@ -1,6 +1,6 @@
 /* Classic Template http://www.templatemo.com/tm-488-classic */
 body {
-    color: #8c8c8c;
+    color: #01020a;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -139,6 +139,27 @@ h2 {
     position: relative;
 }
 
+.carousel-inner {
+    text-align: center; /* Center align the images */
+}
+
+.carousel-item img {
+    display: inline-block; /* Make the images display as inline-block elements */
+    margin: auto; /* Center the images horizontally */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: auto; /* Adjust the position of the carousel controls */
+    bottom: 50%; /* Center the controls vertically */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px; /* Adjust the size of the control icons */
+    height: 30px;
+}
+
 .tm-about-img-container {
     background-image: url('../img/tm-about-img.jpg');
 }
@@ -234,6 +255,15 @@ a:focus {
 .modal-dialog {
 	position: center;
     top: -30px;
+    max-width: fit-content;
+}
+
+.modal-body {
+    padding: 20px; /* Add padding to the modal body */
+}
+
+.modal-body img {
+    margin-bottom: 20px; /* Add spacing between the image and the text */
 }
 
 .button-wrapper {
