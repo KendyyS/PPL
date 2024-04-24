@@ -111,20 +111,6 @@ h2 { font-size: 2.2rem; }
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 400px;
-}
-
-.tm-about-img-container { background-image: url('../img/tm-about-img.jpg');	}
-.tm-blog-img-container { background-image: url('../img/tm-blog-img.jpg'); }
-.tm-contact-img-container { background-image: url('../img/tm-contact-img.jpg'); }
-
-.tm-about-img-container,
-.tm-blog-img-container,
-.tm-contact-img-container {
-	background-size: auto 200px;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 200px;
 }
 
 .tm-title {
@@ -150,6 +136,22 @@ h4 {
 	line-height: 1.6;
 }
 
+/* Style for the drop zone */
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Style for the file input */
+#fileInput {
+	display: list-item;
+	position:absolute;
+	padding: 10px;
+}
+
 .tm-btn {
 	color: white;
 	background-color: #8f8d8d;
@@ -170,6 +172,21 @@ h4 {
 .tm-btn-gray:hover,
 .tm-btn-gray:focus {
 	background-color: #515050;	
+}
+
+.cancel-btn {
+	color: white;
+	background-color: #f44336;
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 20px;
+}
+.cancel-btn:hover,
+.cancel-btn:focus {
+	background-color: #e11a1a;
+	color: white;
+	outline: none;
 }
 
 .tm-margin-b-15 { margin-bottom: 15px; }
@@ -252,13 +269,6 @@ p { line-height: 1.9; }
 
 .tm-form-description { margin-top: 30px; }
 .tm-contact-form { padding-top: 20px; }
-
-#google-map {
-    height: 333px;
-    width: 100%;
-    margin-top: 40px;
-}
-
 .tm-contact-right { padding-left: 30px; }
 .tm-p-small { font-size: 1rem; }
 
@@ -342,6 +352,10 @@ p { line-height: 1.9; }
 
 @media (max-width: 897px) {
 	.tm-btn {
+		padding: 10px 15px;
+		font-size: 1rem;
+	}
+	.cancel-btn {
 		padding: 10px 15px;
 		font-size: 1rem;
 	}

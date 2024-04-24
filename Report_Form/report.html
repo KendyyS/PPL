@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Report Form - UPH Lost and Found</title>
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+</head>
+
+    <body>
+        <div class="tm-home-img-container"></div>
+        <div class="login-container">
+            <h2 class="tm-gold-text tm-form-title">Lost Item Report Form</h2>
+            <p class="tm-form-description">Please fill in the boxes with complete details about the lost item you've found. This way, owners will be able to find their lost item easier.</p> 
+
+            <form action="index.html" method="post" class="tm-contact-form">
+                <!-- Name and NIM -->
+                <h4>Please enter your name and NIM</h4>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="founder_name" class="form-control" placeholder="i.e. Juan Hermanto" required/>
+                </div>
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="number" id="nim" name="founder_nim" class="form-control" placeholder="i.e. 01082220019" required/>
+                </div>
+            
+                <!-- Lost item details -->
+                <h4>Enter lost item details here</h4>
+                <div class="form-group">
+                    <label for="item">Item name</label>
+                    <input type="text" id="item" name="item_name" class="form-control" placeholder=" i.e. Mouse Wireless Putih" required/>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location found</label>
+                    <input type="text" id="location" name="location" class="form-control" placeholder="i.e. Gedung B343" required/>
+                </div>
+                <div class="form-group">
+                    <label for="date_found">Date found</label>
+                    <input type="date" id="date_found" name="date_found" class="form-control" placeholder="Date found" required/>
+                </div>
+                <div class="form-group">
+                    <label for="pick_up">Pick-up point</label>
+                    <input type="text" id="pick_up" name="pick_up" class="form-control" placeholder="i.e. Pos Gedung B" required/>
+                </div>
+                <div>
+                    <h4>Submit item images here</h4>
+                        <label for="fileInput" class="drop-zone">
+                            Please upload your pictures here
+                            <input type="file" id="fileInput" accept=".png, .jpg, .jpeg, .heic" multiple required>
+                        </label>
+                        <p id="fileList">Supported file types: .png, .jpg, .jpeg, .heic</p>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="form-group">
+                    <button type="submit" class="tm-btn">Submit</button>
+                    <a href="/ULNF Website/index.html" class="cancel-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
