@@ -58,33 +58,11 @@
                 
                 <!-- Buttons -->
                 <div class="form-group">
-                    <button type="submit" class="tm-btn">Submit</button>
+                    <a href="/ULNF Website/index.html" class="tm-btn">Submit</button>
                     <a href="/ULNF Website/index.html" class="cancel-btn">Cancel</a>
                 </div>
             </form>
         </div>
-
-        <script>
-        function handleFileSelect(event) {
-            const files = event.target.files;
-            const fileList = document.getElementById('fileList');
-        
-            // Reset the file list
-            fileList.innerHTML = 'Supported file types: .png, .jpg, .jpeg, .heic';
-        
-            // Loop through the selected files
-            for (const file of files) {
-                // Check if it's an image file
-                if (file.type.startsWith('image/')) {
-                    // Display the filename
-                    fileList.textContent += ' ' + file.name;
-                } else {
-                    console.error('Please select only image files.');
-                }
-            }
-        }
-        </script>
-
     </body>
 </html>
 
