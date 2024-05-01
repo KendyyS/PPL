@@ -7,8 +7,8 @@ http://www.templatemo.com/tm-488-classic
 -----------------------------*/
 
 body {
-	color: #8c8c8c;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #000000;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 300;
 	overflow-x: hidden;
@@ -88,14 +88,14 @@ h2 { font-size: 2.2rem; }
 }
 
 .tm-header {
-    background-color: #0b34dc; /* Add a solid background color */
+    background-color: #0b34dc;
 }
 
 .tm-header.sticky-top {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensure the navbar is on top of other content */
+    z-index: 1000;
 }
 
 
@@ -380,7 +380,7 @@ p { line-height: 1.9; }
 		background: rgb(0, 0, 0);
 		border-color: #ffffff;
 		color: #ffffff;
-		display: block;
+		display: flex;
 		margin-left: auto;
 		margin-right: 0;
 	}
