@@ -10,71 +10,78 @@
     <link rel="stylesheet" href="/Necessary/css/bootstrap.min.css">                           
     <link rel="stylesheet" href="/Necessary/css/style.css">                                   
 
-    <script>
-        $('input[required], select[required],textarea[required]').each(function(){$($(this).parent()).find('label').addClass('required')});
-        </script>
-        
-        <style>
-           .required:after{
-                        content:" *";
-                        color:red;
-                     }
-        </style>
-        
+    <style>
+        .required:after {
+            content: " *";
+            color: red;
+        }
+    </style>
 </head>
 
-    <body>
-        <div class="tm-home-img-container"></div>
-        <div class="login-container">
-            <h2 class="tm-gold-text tm-form-title">Lost Item Claim Form</h2>
-            <p class="tm-form-description">Please fill in the boxes with complete details about the lost item you want to claim.</p> 
+<body>
+    <div class="tm-home-img-container"></div>
+    <div class="login-container">
+        <h2 class="tm-gold-text tm-form-title">Lost Item Claim Form</h2>
+        <p class="tm-form-description">Please fill in the boxes with complete details about the lost item you want to claim.</p>
 
-            <form action="index.html" method="post" class="tm-contact-form">
-                <!-- Name and NIM -->
-                <h4>Please enter your name and NIM</h4>
-                <div class="form-group">
-                    <label class="required" for="name">Name</label>
-                    <input type="text" id="name" name="searcher_name" class="form-control" placeholder="i.e. Juan Hermanto"/>
-                </div>
-                <div class="form-group">
-                    <label class="required" for="nim">NIM</label>
-                    <input type="text" id="nim" name="searcher_nim" class="form-control" placeholder="i.e. 01082220019"/>
-                </div>
-            
-                <!-- Lost item details -->
-                <h4>Enter lost item details here</h4>
-                <div class="form-group">
-                    <label for="item">Item name</label>
-                    <input type="text" id="item" name="item_name" class="form-control" value=" Mouse Wireless Putih" readonly/>
-                </div>
-                <div class="form-group">
-                    <label for="location">Location found</label>
-                    <input type="text" id="location" name="location" class="form-control" value=" Gedung B343" readonly/>
-                </div>
-                <div class="form-group">
-                    <label class="required" for="date_found">Date claimed</label>
-                    <input type="date" id="date_found" name="date_found" class="form-control" placeholder="Date found"/>
-                </div>
-                <div class="form-group">
-                    <label class="required" for="pick_up">Pick-up point</label>
-                    <input type="text" id="pick_up" name="pick_up" class="form-control" placeholder="i.e. Pos Gedung B"/>
-                </div>
-                <div>
-                    <h4>Submit item images here</h4>
-                        <label for="fileInput" class="drop-zone">
-                            Please upload your pictures here
-                            <input type="file" id="fileInput" accept=".png, .jpg, .jpeg, .heic" multiple required>
-                        </label>
-                        <p id="fileList">Supported file types: .png, .jpg, .jpeg, .heic</p>
-                    </div>
-                
-                <!-- Buttons -->
-                <div class="form-group">
-                    <a href="/ULNF Website/index.html" class="tm-btn" style="margin-right: 20px;">Submit</button>
-                    <a href="/ULNF Website/index.html" class="cancel-btn">Cancel</a>
-                </div>
-            </form>
-        </div>
-    </body>
+        <form action="index.html" method="post" class="tm-contact-form" id="claimForm" onsubmit="return validateForm()">
+            <!-- Name and NIM -->
+            <h4>Please enter your name and NIM</h4>
+            <div class="form-group">
+                <label class="required" for="name">Name</label>
+                <input type="text" id="name" name="searcher_name" class="form-control" placeholder="i.e. Juan Hermanto" required/>
+            </div>
+            <div class="form-group">
+                <label class="required" for="nim">NIM</label>
+                <input type="text" id="nim" name="searcher_nim" class="form-control" placeholder="i.e. 01082220019" required/>
+            </div>
+
+            <!-- Lost item details -->
+            <h4>Enter lost item details here</h4>
+            <div class="form-group">
+                <label for="item">Item name</label>
+                <input type="text" id="item" name="item_name" class="form-control" value=" Mouse Wireless Putih" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="location">Location found</label>
+                <input type="text" id="location" name="location" class="form-control" value=" Gedung B343" readonly/>
+            </div>
+            <div class="form-group">
+                <label class="required" for="date_found">Date claimed</label>
+                <input type="date" id="date_found" name="date_found" class="form-control" placeholder="Date found" required/>
+            </div>
+            <div class="form-group">
+                <label class="required" for="pick_up">Pick-up point</label>
+                <input type="text" id="pick_up" name="pick_up" class="form-control" placeholder="i.e. Pos Gedung B" required/>
+            </div>
+            <div>
+                <h4>Submit item images here</h4>
+                <label for="fileInput" class="drop-zone">
+                    Please upload your pictures here
+                    <input type="file" id="fileInput" accept=".png, .jpg, .jpeg, .heic" multiple required>
+                </label>
+                <p id="fileList">Supported file types: .png, .jpg, .jpeg, .heic</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-group">
+                <button type="submit" class="tm-btn" style="margin-right: 20px;">Submit</button>
+                <a href="/ULNF Website/index.html" class="cancel-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var form = document.getElementById("claimForm");
+            if (!form.checkValidity()) {
+                // If the form is not valid, prevent submission
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
 </html>
-
