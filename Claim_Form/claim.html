@@ -7,8 +7,8 @@
     <title>Report Form - UPH Lost and Found</title>
     <!-- load stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+    <link rel="stylesheet" href="/Necessary/css/bootstrap.min.css">                           
+    <link rel="stylesheet" href="/Necessary/css/style.css">                                   
 
     <script>
         $('input[required], select[required],textarea[required]').each(function(){$($(this).parent()).find('label').addClass('required')});
@@ -45,11 +45,11 @@
                 <h4>Enter lost item details here</h4>
                 <div class="form-group">
                     <label for="item">Item name</label>
-                    <input type="text" id="item" name="item_name" class="form-control" placeholder=" i.e. Mouse Wireless Putih"/>
+                    <input type="text" id="item" name="item_name" class="form-control" value=" Mouse Wireless Putih" readonly/>
                 </div>
                 <div class="form-group">
                     <label for="location">Location found</label>
-                    <input type="text" id="location" name="location" class="form-control" placeholder="i.e. Gedung B343"/>
+                    <input type="text" id="location" name="location" class="form-control" value=" Gedung B343" readonly/>
                 </div>
                 <div class="form-group">
                     <label class="required" for="date_found">Date claimed</label>
