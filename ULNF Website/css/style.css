@@ -49,31 +49,28 @@ h2 {
 }
 
 @media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
         display: block;
-        margin-top: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-    }
-
-    .navbar .dropdown-menu.fade-down {
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        transform: rotateX(0deg);
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
+      }
 }
 
 .tm-site-name {
-    color: #ffffff;
+    color: #002db3;
     display: block;
     font-size: 2rem;
     font-weight: 400;
@@ -81,6 +78,9 @@ h2 {
 
 .tm-main-nav {
     font-size: 1.2rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar-nav .nav-link {
@@ -92,13 +92,16 @@ h2 {
 .nav-item.active .nav-link,
 .nav-link:hover,
 .nav-link:focus {
-    color: #0b34dc;
+    color: #002db3;
     background-color: #ffffff;
 }
 
 .tm-header {
-    background-color: #0b34dc;
-    /* Add a solid background color */
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: 10%;
+    background-repeat: no-repeat;
+    height: 100px;
 }
 
 .tm-header.sticky-top {
@@ -109,8 +112,17 @@ h2 {
     /* Ensure the navbar is on top of other content */
 }
 
-.tm-gold-text {
+.tm-header-text {
+    color: #ffffff;
+    text-shadow: 2px 1px #3e3d3d;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tm-title-text {
     color: #000000;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .tm-section {
@@ -119,11 +131,14 @@ h2 {
 }
 
 .tm-home-img-container {
-    background-image: url('../img/tm-home-img.jpg');
+    background-image: url('../img/home-navbar.png');
     background-size: cover;
-    background-position: 10%;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxes {
@@ -172,13 +187,13 @@ h2 {
 }
 
 .tm-content-box {
-    max-width: 100%; /* Adjusted to fit the parent container */
-    margin-bottom: 1px; /* Adjusted margin as needed */
-    padding-bottom: 10%; /* Adjusted padding as needed */
-    margin-bottom: 10px; /* Duplicate margin-bottom removed */
-    display: flex; /* Added flex display */
-    flex-direction: column; /* Added column flex direction */
-    align-items: center; /* center align items */
+    max-width: 100%; 
+    margin-bottom: 1px; 
+    padding-bottom: 10%; 
+    margin-bottom: 10px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
 h3 {
@@ -238,16 +253,16 @@ a:focus {
 }
 
 .modal-body {
-    padding: 20px; /* Add padding to the modal body */
+    padding: 20px;
 }
 
 .modal-body img {
-    margin-bottom: 20px; /* Add spacing between the image and the text */
+    margin-bottom: 20px;
 }
 
 .button-wrapper {
     position: relative;
-    margin-bottom: 15px; /* Adjust as needed */
+    margin-bottom: 15px;
     margin-top: 15px;
     text-align: center;
     width: 100%;
@@ -260,7 +275,7 @@ a:focus {
 }
 
 .btn-primary {
-    background-color: #0b34dc; /* Light green */
+    background-color: #0b34dc;
     border-color: #0b34dc;
     border: 1px;
     border-radius: 10px;
@@ -546,7 +561,7 @@ p {
 	.tm-main-nav {
 		position: fixed;
 		right: 0;
-		top: 21px;
+		top: 23px;
 		z-index: 1000;
 	}
 	#tmNavbar .navbar-nav .nav-item { float: none; }
