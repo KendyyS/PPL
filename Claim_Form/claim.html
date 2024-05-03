@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Report Form - UPH Lost and Found</title>
+    <title>Claim Form - UPH Lost and Found</title>
     <!-- load stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="/Necessary/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
@@ -71,8 +71,7 @@
             </div>
 
             <!-- Buttons -->
-            <div class="form-group">
-                <a href="/ULNF Website/index.html" button type="submit" class="tm-btn" style="margin-right: 20px;">Submit</button>
+                <button type="submit" formaction="/ULNF Website/index.html" class="tm-btn" style="margin-right: 20px;">Submit</button>
                 <a href="/ULNF Website/index.html" class="cancel-btn">Cancel</a>
             </div>
         </form>
@@ -80,7 +79,7 @@
 
     <script>
         function validateForm() {
-            var form = document.getElementById("reportForm");
+            var form = document.getElementById("claimForm");
             if (!form.checkValidity()) {
                 // If the form is not valid, prevent submission
                 event.preventDefault();
