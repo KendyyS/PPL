@@ -25,7 +25,7 @@
         <h2 class="tm-gold-text tm-form-title">Lost Item Report Form</h2>
         <p class="tm-form-description">Please fill in the boxes with complete details about the lost item you've found. This way, owners will be able to find their lost item easier.</p>
 
-        <form action="index.html" method="post" class="tm-contact-form" id="reportForm" onsubmit="return validateForm()">
+        <form method="post" class="tm-contact-form" id="reportForm" onsubmit="return validateForm()">
             <!-- Name and NIM -->
             <h4>Please enter your name and NIM</h4>
             <div class="form-group">
@@ -55,17 +55,24 @@
                 <label class="required" for="drop_off">Drop-off point</label>
                 <input type="text" id="drop_off" name="drop_off" class="form-control" placeholder="i.e. Pos Gedung B" required/>
             </div>
-            <div>
+            <div class="form-group">
                 <h4>Please upload your pictures here</h4>
                 <label for="fileInput" class="drop-zone">
-                    <input type="file" multiple="false" accept=".png, .jpg, .jpeg, .heic" id="finput" multiple required onchange="upload()">
+                    <input type="file" multiple="false" accept=".png, .jpg, .jpeg, .heic" id="finput" onchange="upload()">
                 </label>
                 <p>Supported file types: .png, .jpg, .jpeg, .heic</p>
+                
+                <br>
+                    <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox" required>
+                    <label class="required" for="checkbox1"> I have submitted the correct information and data.</label><br>
+                    <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox" required>
+                    <label class="required" for="checkbox2"> I can confirm the item has been dropped off at the pick-up point.</label><br>
+                <br>
             </div>
 
             <!-- Buttons -->
             <div class="form-group">
-                <button type="submit" class="tm-btn" style="margin-right: 20px;">Submit</button>
+                <button type="submit" href="/Report_Form/report.html" class="tm-btn" style="margin-right: 20px;">Submit</button>
                 <a href="/ULNF Website/index.html" class="cancel-btn">Cancel</a>
             </div>
         </form>
@@ -82,6 +89,7 @@
             }
             return true;
         }
+
     </script>
 </body>
 </html>

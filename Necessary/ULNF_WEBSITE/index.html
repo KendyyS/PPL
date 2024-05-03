@@ -1,11 +1,10 @@
-<!-- Classic Template http://www.templatemo.com/tm-488-classic -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UPH Lost and Found</title>
+    <title>Welcome to UPH's Lost and Found</title>
     <!-- load stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
     <link rel="stylesheet" href="/Necessary/ULNF_WEBSITE/css/bootstrap.min.css">
@@ -55,9 +54,10 @@
         <p class="tm-header-text">Scroll down to continue..</p>
     </div>
 </div>
-<section class="tm-section">
-    <div class="container-fluid">
-        <div class="row">
+
+    <section class="tm-section">
+        <div class="container-fluid">
+         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
                 <h2 class="tm-main-text">Recently lost items</h2>
                 <h4 class="tm-subtitle">Find your lost items here!</h4>
@@ -360,27 +360,29 @@
 
 
 <script>
-
+    // Function to redirect page to Login Page
     function loginFunction(){
         location.replace("/login-page/login-page.html");
     }
-
+    // Function to redirect page to Claim Page
     function ClaimPage() {
         // location.replace("/Claim_Form/index.html")
         window.location.href = "/Claim_Form/claim.html";
     }
-
+    // Function to redirect page to Report Form
     function ReportPage() {
         // location.replace("/Report_Form/index.html")
         window.location.href = "/Report_Form/report.html";
     }
 
+/*     // Function to redirect page to Claim Form
     $(document).on('click', function(event) {
         if ($(event.target).hasClass('modal')) {
             $('#claimModal1').modal('hide');
         }
-    });
+    }); */
     
+    // Function for pages (WIP)
     document.addEventListener("DOMContentLoaded", function() {
     const pageButtons = document.querySelectorAll(".page-button");
     const cardContainer = document.querySelector(".boxes");
@@ -434,7 +436,6 @@
             navbar.classList.remove('navbar-scrolled');
         }
     });
-
 });
 
 
