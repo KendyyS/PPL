@@ -603,7 +603,7 @@ p {
 	#tmNavbar .navbar-nav .nav-item { float: none; }
 	#tmNavbar .navbar-nav .nav-link { padding: 10px 35px; }
 	#tmNavbar {
-		background: white;
+		background: rgb(35, 34, 34);
 		color: black; 
 		border-radius: 6px;
 	}
@@ -611,7 +611,7 @@ p {
 	.navbar-toggler {
 		background: rgb(255, 255, 255);
 		border-color: #ffffff;
-		color: #0b34dc;
+		color: #000000;
 		display: block;
 		margin-left: auto;
 		margin-right: 0;
